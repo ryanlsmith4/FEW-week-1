@@ -1,4 +1,4 @@
-console.log('here');
+
 /////////popup//////////////
 
 //declare default vars
@@ -138,6 +138,7 @@ for (let i = 0; i < acc.length; i++) {
         //add in the active class
         this.classList.toggle("active");
         //select sibling element
+        let panel = this.nextElementSibling;
 
         //if sibling is open, close it, if closed, open it
         if (panel.style.maxHeight) {
