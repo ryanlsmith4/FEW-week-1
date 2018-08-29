@@ -1,0 +1,101 @@
+<!--
+
+ Challenge 4: You have been tasked to create a
+ for that sets a users profile. It will allow
+ them to do the following:
+
+ - Enter their User name (input text, should not autocomplete)
+ - Email (input email)
+ - Number of pets (input number)
+ - Birthday (input date)
+ - Choose an prefix (select)
+ - Set a role (input type radio)
+ - Show public profile (checkbox, should be checked by default)
+ - Enter a bio (textarea)
+ - Upload a picture (input file, should only accept images)
+ - Self Destruct (input checkbox, should be DISABLED by default since we haven't implemented this feature yet)
+
+ Your job is to:
+ - Organize this better by adding tags
+ - Add sensible placeholders
+ - Connect lables to elements
+ - Associate lables with their form element
+
+ The form must to send file data. Set the attributes on the form tag:
+ - It must send a file wat are the required attributes for this?
+
+ Stretch Challenge: Use the pattern attribute to check the values in
+ fields meet requirements. (you will need to have experience with
+ regular expressions)
+ - Name should not be empty.
+ - Name should be at least 6 characters
+ - Name should only contain letters and numbers
+
+ -->
+
+<form action="/" method="get" autocomplete="off">
+
+    <div>
+        <label id="input-name">Name</label>
+        <input for="input-name" name="name"  placeholder="Enter Your Name">
+
+
+
+   </div>
+    <div>
+        <label id="input-email">Email</label>
+        <input for="input-email" name="email" type="email" placeholder="Enter a valid email">
+
+    </div>
+    <div>
+        <label id="input-pet">Pet Count</label>
+        <input id="input-pet" name="pets" type="number" placeholder="0">
+
+</div>
+    <div>
+        <label id="input-bday">Birthday</label>
+        <input for="input-name" name="birthday" type="date" placeholder="04/12/1993">
+
+</div>
+    <div>
+        <select name="prefix">
+    <option>Mr</option>
+    <option>Mrs</option>
+    <option>Ms</option>
+    <option>Sir</option>
+    <option>Madam</option>
+    <option>Dr</option>
+    <option>None</option>
+  </select>
+    </div>
+    <div>
+        <input id="radio-admin" type="radio" name="role" value="Admin"/>
+        <label for="radio-admin" >Admin</label>
+        <input id="radio-editor" type="radio" name="role" value="Editor" />
+        <label for="radio-editor">Editor</label>
+        <input id="radio-contributor" type="radio" name="role" value="Contributor" />
+        <label for="radio-contributor">Contributor</label>
+        <input id="radio-contributor2" type="radio" name="role" value="Contributor" />
+        <label for="radio-contributor2">Contributor</label>
+    </div>
+    <div>
+        <input id="public" type="checkbox" name="public">
+        <label for="public">Public Bio</label>
+    </div>
+    <div>
+        <textarea name="bio"></textarea>
+    </div>
+    <div>
+        <label id="upimage">Upload Image</label>
+        <input for="upimage" name="image" type="file" accept="image/x">
+
+</div>
+    <div>
+        <label hidden>Self Destruct</label>
+        <input name="self-destruct" type="check" hidden>
+
+</div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
